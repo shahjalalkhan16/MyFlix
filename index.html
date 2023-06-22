@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/output.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>MyFlix |Home</title>
+</head>
+
+<body class="bg-dark text-white md: ">
+    <div>
+        <header>
+            <div class="flex justify-between md:mx-10 mt-5 ">
+                <img src="/assets/MYFLIX.png " alt=" " width=" 200 ">
+                <a class="bg-secendary py-2 px-3 rounded-md" href=" ">Sign Up</a>
+            </div>
+        </header>
+        <section class="  py-10 w-full h-screen bg-no-repeat bg-cover bg-hero-pattern bg-gray-950 md: mt-10 flex flex-col justify-center text-center ">
+            <div class=" ">
+                <h1 class=" text-5xl font-bold">Unlimited movies, TV shows, and more</h1>
+                <p class="text-2xl font-semibold ">Plans now start at USD2.99/month.</p>
+                <p class="text-2xl  "> <br>Ready to watch? Enter your email to create or restart your membership.</p>
+                <div class="mt-3 text-2xl ">
+                    <input class="bg-black bg-opacity-80 p-3 border w-96 rounded-md" type="email " placeholder="Email address ">
+                    <a class="bg-secendary p-4 rounded-md " href=" ">Get Started<i class='text-4xl bx bx-chevron-right align-middle'></i> </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class=" bg-black mt-5 py-10 ">
+        <div class="md:flex items-center justify-between mx-20 ">
+            <div>
+                <h1 class=" text-6xl font-bold mb-5 ">Enjoy on your TV</h1>
+                <p class=" text-xl font-medium">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <img src="/assets/tv1_prev_ui.png " alt=" ">
+        </div>
+    </section>
+    <section class="bg-black mt-5  py-10">
+        <div class="md:flex items-center justify-between  mx-20">
+            <div>
+                <h1 class=" text-6xl font-bold mb-5 ">Download your shows to watch offline</h1>
+                <p class=" text-xl font-medium">Save your favorites easily and always have something to watch.</p>
+            </div>
+            <img src=" /assets/mobile_prev_ui.png " alt=" ">
+        </div>
+    </section>
+
+    <section class="bg-black mt-5  py-10  w-full h-96">
+        <div class="md:flex items-center justify-between  mx-20">
+            <div class="w-1/2">
+                <h1 class=" text-6xl font-bold mb-5 ">Watch everywhere</h1>
+                <p class=" text-xl font-medium">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class=" bg-black mt-5 py-10 ">
+        <div class="md:flex items-center justify-between md:flex-row-reverse mx-20">
+            <div>
+                <h1 class=" text-6xl font-bold mb-5 ">Create profiles for kids</h1>
+                <p class=" text-xl font-medium">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
+            </div>
+            <img src="/assets/kids.png " alt=" "></div>
+    </section>
+    <section class=" bg-black mt-5 py-10  md:flex items-center justify-between md:flex-row ">
+        <div class="flex justify-center items-start my-2">
+            <div class="w-full  text-3xl sm:w-10/12  my-1">
+                <h2 class="text-6xl font-bold text-vnet-blue mb-4 text-center">Frequently Asked Questions</h2>
+                <ul class="flex flex-col">
+                    <li class="bg-faq my-2 shadow-lg" x-data="accordion(1)">
+                        <h2 @click="handleClick()" class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                            <span>What is Myflix?</span>
+                            <svg :class="handleRotate()" class="fill-current text-white h-6 w-6 transform transition-transform duration-500" viewBox="0 0 20 20">
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()" class=" border-l-2 border-white overflow-hidden max-h-0 duration-500 transition-all">
+                            <p class="p-3 text-white">
+                                Myflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
+                                <br> <br> You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There 's always something new to discover and new TV shows and movies are added every week! </p>
+                        </div>
+                    </li>
+                    <li class="bg-faq my-2 shadow-lg" x-data="accordion(2)">
+                        <h2 @click="handleClick()" class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                            <span>How much does Myflix cost?</span>
+                            <svg :class="handleRotate()" class="fill-current text-white h-6 w-6 transform transition-transform duration-500" viewBox="0 0 20 20">
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()" class="border-l-2 border-white overflow-hidden max-h-0 duration-500 transition-all">
+                            <p class="p-3 text-white">
+                                Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from USD2.99 to USD9.99 a month. No extra costs, no contracts. </p>
+                        </div>
+                    </li>
+                    <li class="bg-faq my-2 shadow-lg" x-data="accordion(3)">
+                        <h2 @click="handleClick()" class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                            <span>Where can I watch?</span>
+                            <svg :class="handleRotate()" class="fill-current text-white h-6 w-6 transform transition-transform duration-500" viewBox="0 0 20 20">
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()" class="border-l-2 border-white overflow-hidden max-h-0 duration-500 transition-all">
+                            <p class="p-3 text-white">
+                                Watch anywhere, anytime. Sign in with your Myflix account to watch instantly on the web at myflix.com from your personal computer or on any internet-connected device that offers the Myflix app, including smart TVs, smartphones, tablets, streaming media
+                                players and game consoles.
+                                <br> <br> You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Myflix with you anywhere. </p>
+                        </div>
+                    </li>
+                    <li class="bg-faq my-2 shadow-lg" x-data="accordion(4)">
+                        <h2 @click="handleClick()" class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                            <span>How do I cancel?</span>
+                            <svg :class="handleRotate()" class="fill-current text-white h-6 w-6 transform transition-transform duration-500" viewBox="0 0 20 20">
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()" class="border-l-2 border-white overflow-hidden max-h-0 duration-500 transition-all">
+                            <p class="p-3 text-white">
+                                Myflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="bg-faq my-2 shadow-lg" x-data="accordion(5)">
+                        <h2 @click="handleClick()" class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                            <span>What can I watch on Netflix?</span>
+                            <svg :class="handleRotate()" class="fill-current text-white h-6 w-6 transform transition-transform duration-500" viewBox="0 0 20 20">
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()" class="border-l-2 border-white overflow-hidden max-h-0 duration-500 transition-all">
+                            <p class="p-3 text-white">
+                                Myflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Myflix originals, and more. Watch as much as you want, anytime you want. </p>
+                        </div>
+                    </li>
+                    <li class="bg-faq my-2 shadow-lg" x-data="accordion(6)">
+                        <h2 @click="handleClick()" class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+                            <span>Is Myflix good for kids?</span>
+                            <svg :class="handleRotate()" class="fill-current text-white h-6 w-6 transform transition-transform duration-500" viewBox="0 0 20 20">
+                      <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+                    </svg>
+                        </h2>
+                        <div x-ref="tab" :style="handleToggle()" class="border-l-2 border-white overflow-hidden max-h-0 duration-500 transition-all  ">
+                            <p class="p-3 text-white">
+                                The Myflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
+                                <br> <br> Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see. </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="mt-20  text-center">
+                    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                    <div class="mt-5 mb-20">
+                        <input class="bg-black bg-opacity-80 p-3 border w-96 rounded-md" type="email " placeholder="Email address ">
+                        <a class="bg-secendary p-3  rounded-md " href=" ">Get Started<i class='align-middle text-3xl  bx bx-chevron-right '></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-black mt-5 pt-10 text-lg py-10">
+        <div class="text-opacity-60 mx-3 md:mx-10 pt-3 underline">
+            <a href="">Questions? Contact us.</a>
+            <div class="mt-3 grid grid-cols-3 gap-4">
+                <a href="">FAQ</a>
+                <a href="">Help Center</a>
+                <a href="">Account</a>
+                <a href="">Media Center</a>
+                <a href="">Investigator Relation</a>
+                <a href="">Jobs</a>
+                <a href="">Ways to Watch</a>
+                <a href="">Terms of Use</a>
+                <a href="">Privacy</a>
+                <a href="">Cookie Preferences</a>
+                <a href="">Corporate Information</a>
+                <a href="">Contact Us</a>
+                <a href="">Speed Test</a>
+                <a href="">Legal Notice</a>
+                <a href="">Only on Myflix</a>
+            </div>
+        </div>
+
+        <div class="md:mx-10 mt-10">
+            <div class="bg-faq bg-opacity-20 border w-40 p-2 flex gap-3">
+                <span class="material-symbols-outlined">language</span>English<span class="material-symbols-outlined">
+                    arrow_drop_down</span>
+            </div>
+            <p>&copy Myflix Bangladesh</p>
+        </div>
+    </section>
+    <script src="./index.js">
+    </script>
+</body>
+
+</html>
+
+</html>
